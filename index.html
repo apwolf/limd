@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My current life</title>
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header__container">
+                <div class="left-plug"></div>
+                <div class="logo"><img src="img/logo2.png" alt="logo"></div>
+                <nav class="nav"></nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container main__container">
+                <h1 class="main__title"></h1>
+                <section id="music" class="media audio">
+                    <article class="groupofaudio new">
+                        <h1 class="groupofaudio__title">...new</h1>
+                        <section class="groupofaudio__topic topic">
+                            <h2 class="topic__title"><img src="img/plak.gif" alt=""></h2>
+                            <section class="topic__items">
+                                <figure>
+                                    <figcaption>&#9835; Blue October - How to Dance in Time</figcaption>
+                                    <audio preload="none" controls src="audio/Blue October - How to Dance in Time.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; Morten Harket - Stay</figcaption>
+                                    <audio preload="none" controls src="audio/Morten Harket - Stay.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; Shayne Ward - About You Now</figcaption>
+                                    <audio preload="none" controls src="audio/Shayne Ward - About You Now.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; Mike + The Mechanics - Don-'t Know What Came Over Me</figcaption>
+                                    <audio preload="none" controls src="audio/Mike + The Mechanics - Don-'t Know What Came Over Me.mp3"></audio>
+                                </figure>
+                            </section>
+                        </section>
+                        <section class="groupofaudio__topic topic">
+                            <h2 class="topic__title">типа релакс</h2>
+                            <section class="topic__items">
+                                <figure>
+                                    <figcaption>&#9835; a-ha - Velvet</figcaption>
+                                    <audio preload="none" controls src="audio/a-ha - Velvet.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; NIGHT TRAVELER - Late Night Radio</figcaption>
+                                    <audio preload="none" controls src="audio/NIGHT TRAVELER - Late Night Radio.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; ATB - The Autumn Leaves</figcaption>
+                                    <audio preload="none" controls src="audio/ATB - The Autumn Leaves.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; Ensoul - Wild</figcaption>
+                                    <audio preload="none" controls src="audio/Ensoul - Wild.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; Goody Grace - On Repeat</figcaption>
+                                    <audio preload="none" controls src="audio/Goody Grace - On Repeat (feat. Cigarettes After Sex & Lexi Jayde).mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; R. I. B. - The Breath of Autumn</figcaption>
+                                    <audio preload="none" controls src="audio/R. I. B. - The Breath of Autumn.mp3"></audio>
+                                </figure>
+                                <figure>
+                                    <figcaption>&#9835; Hollow Coves - Purple.mp3</figcaption>
+                                    <audio preload="none" controls src="audio/Hollow Coves - Purple.mp3"></audio>
+                                </figure>
+                            </section>
+                        </section>
+                    </article>
+                    <article class="groupofaudio yesterday">
+                        <h1 class="groupofaudio__title">Yesterday</h1>
+                        <section class="groupofaudio__items"></section>
+                    </article>
+                    <article class="groupofaudio">
+                        <h1 class="groupofaudio__title">Fixed</h1>
+                        <section class="groupofaudio__items"></section>
+                    </article>
+                </section>
+                <section class="media video">
+                    <article class="groupofvideo"></article>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+    <script>
+        const audio = document.getElementsByTagName("audio");
+        for (let i =0; i < audio.length; i++) {
+            audio[i].volume = 0.3;
+        }
+
+        const playPendings = [];
+
+        for(let key in audio) {
+            playPendings.push(audio[key])
+        }
+
+        const stopmusic = (event) => {
+            for(let i = 0; i < audio.length; i++) {
+                if(audio[i] != event.target) {
+                    audio[i].pause();
+                }
+            }
+        }
+
+        for(let i = 0; i < playPendings.length; i++) {
+            let currentItem = playPendings[i];
+            currentItem.onplay = stopmusic;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* normalize css */
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+a {
+    background-color: transparent;
+}
+
+b, strong {
+    font-weight: bolder;
+}
+
+img {
+    border-style: none;
+}
+
+/* General */
+
+body {
+    background-color: #004644;
+    /* background-color: #1e88e5; */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+h1 {
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    color: rgb(166, 166, 231);
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+audio {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    padding: 30px 10px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    flex: 1 0 auto;
+    max-width: 100px;
+}
+
+/* Main */
+
+main {
+    padding: 0 10px;
+}
+
+.main__title {
+    line-height: 0;
+    margin: 0;
+}
+
+.groupofaudio {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.groupofaudio__title {
+    text-align: center;
+}
+
+.audio .new h1{
+    color: yellow;
+    margin-top: 0;
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 15px;
+    border: 3px #cae0db dotted;
+    position: relative;
+    /* background-color: #3c3c3c; */
+    background-color: #004644;
+}
+
+.topic__title {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: italic;
+    position: absolute;
+    padding: 10px 10px;
+    text-align: center;
+    top: -25px;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 5px 5px 0 5px;
+}
+
+.topic__title::after {
+    border-width: 15px;
+    border-color: transparent transparent #fff transparent;
+    bottom: 0;
+    right: -8px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(10deg);
+}
+
+.topic__items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.audio .yesterday h1 {
+    color: skyblue;
+}
